@@ -22,7 +22,7 @@ class MessageManager:
     def get_messages(self):
         return self.messages
  
-message_manager = MessageManager(max_messages=1000)
+message_manager = MessageManager()
 def react_to_message(channel_id, message_id, emoji):
     url = f"https://discord.com/api/v10/channels/{channel_id}/messages/{message_id}/reactions/{emoji}/@me"
     headers = {
